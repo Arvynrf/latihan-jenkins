@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage ("build docker container") {
             steps {
-                sh 'sudo docker-compose up -d'
+                bat 'sudo docker-compose up -d'
             }
         }
     }
