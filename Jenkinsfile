@@ -3,7 +3,7 @@ pipeline{
         label "docker-agent"
     }
     stages {
-        stage {
+        stage ("build docker container") {
             steps {
                 sh 'sudo docker-compose up -d'
             }
