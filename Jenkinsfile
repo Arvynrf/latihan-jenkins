@@ -8,7 +8,6 @@ pipeline{
         // }
         stage ("testing") {
             steps {
-                sh 'systemctl start docker'
                 sh 'docker info'
             }
         }
