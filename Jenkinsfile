@@ -1,9 +1,14 @@
 pipeline{
     agent any
     stages {
-        stage ("build docker container") {
+        stage ("build iamge") {
             steps {
-                sh 'docker-compose up -d'
+                sh 'docker-compose build'
+            }
+        }
+        stage ("run"){
+            steps{
+                sh 'docker-compose up'
             }
         }
         // stage ("testing") {
